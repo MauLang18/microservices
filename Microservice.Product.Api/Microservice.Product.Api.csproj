@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Microservice.Product.Infrastructure\Microservice.Product.Infrastructure.csproj" />
     <ProjectReference Include="..\Microservices.Product.Application\Microservice.Product.Application.csproj" />
+    <ProjectReference Include="..\Taller.Microservices.IoC\Taller.Microservices.IoC.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,11 @@
 ﻿using MediatR;
+using Microservice.Product.Application.Interfaces.Events;
 using Microservice.Product.Application.UseCases.Product.Commands.CreateCommand;
 using Microservice.Product.Application.UseCases.Product.Commands.DeleteCommand;
 using Microservice.Product.Application.UseCases.Product.Commands.UpdateCommand;
 using Microservice.Product.Application.UseCases.Product.Queries.GetAllQuery;
 using Microservice.Product.Application.UseCases.Product.Queries.GetByIdQuery;
+using Microservice.Product.Domain.Commands;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Microservice.Product.Api.Controllers
@@ -13,10 +15,12 @@ namespace Microservice.Product.Api.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly IProductEventBus _productEventBus;
 
-        public ProductController(IMediator mediator)
+        public ProductController(IMediator mediator, IProductEventBus productEventBus)
         {
             _mediator = mediator;
+            _productEventBus = productEventBus;
         }
 
         [HttpGet("List")]
@@ -41,6 +45,14 @@ namespace Microservice.Product.Api.Controllers
             var response = await _mediator.Send(command);
 
             return Ok(response);
+        }
+
+        [HttpPost("CreateEvent")]
+        public IActionResult ProductCreateEvent([FromBody] ProductCommand command)
+        {
+            _productEventBus.OrderProduct(command);
+
+            return Ok(command);
         }
 
         [HttpPut("Update")]

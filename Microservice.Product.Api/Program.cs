@@ -1,13 +1,11 @@
-using Microservice.Product.Application;
-using Microservice.Product.Infrastructure;
+using Microservice.Product.Api.Middleware;
+using Taller.Microservices.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services
-    .AddInfrastructure(builder.Configuration)
-    .AddApplication();
+DependencyInjection.AddServicesInjection(builder.Services, builder.Configuration);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -26,6 +24,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.AddMiddlewareValidation();
 
 app.MapControllers();
 
