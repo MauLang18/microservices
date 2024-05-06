@@ -39,6 +39,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Product.Applic
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{EC6EE9A1-86F3-4C20-A7CF-904B337E7345}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BC33887C-3239-4F34-A038-04C9F5DAD339}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Product.Tests", "..\Microservice.Product.Tests\Microservice.Product.Tests.csproj", "{26F0A5F1-B5A2-4205-97B3-C789B2B0A67B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +81,10 @@ Global
 		{EC6EE9A1-86F3-4C20-A7CF-904B337E7345}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC6EE9A1-86F3-4C20-A7CF-904B337E7345}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC6EE9A1-86F3-4C20-A7CF-904B337E7345}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26F0A5F1-B5A2-4205-97B3-C789B2B0A67B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26F0A5F1-B5A2-4205-97B3-C789B2B0A67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26F0A5F1-B5A2-4205-97B3-C789B2B0A67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26F0A5F1-B5A2-4205-97B3-C789B2B0A67B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +103,8 @@ Global
 		{CD2B5D70-7BB1-4AE1-8846-A9AC1574194F} = {0C77095D-4E94-4275-90CD-38EEB3446C4A}
 		{8511C201-CDF3-4847-8672-BB7546493C9E} = {F1AC05E6-8D49-4DE8-A87D-44EA3183CE9E}
 		{9E041BAE-D538-4A06-893D-044EBDD29709} = {5C42F3BE-8FB9-4274-89F1-BFDFE80EABE2}
+		{BC33887C-3239-4F34-A038-04C9F5DAD339} = {AD9C038C-41B7-4C15-ABAA-D61A5B8161AE}
+		{26F0A5F1-B5A2-4205-97B3-C789B2B0A67B} = {BC33887C-3239-4F34-A038-04C9F5DAD339}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5B09CAB7-DDF9-4D4C-86FC-FD6398218580}
