@@ -30,8 +30,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Taller.Microservices\Microservice.Product.Api\Microservice.Product.Api.csproj" />
-    <ProjectReference Include="..\Taller.Microservices\Taller.Microservices.IoC\Taller.Microservices.IoC.csproj" />
+    <ProjectReference Include="..\Microservice.Product.Api\Microservice.Product.Api.csproj" />
+    <ProjectReference Include="..\Taller.Microservices.IoC\Taller.Microservices.IoC.csproj" />
   </ItemGroup>
 
   <ItemGroup>
