@@ -4,6 +4,6 @@ using Microservice.Product.Application.Dtos.Product.Response;
 
 namespace Microservice.Product.Application.UseCases.Product.Queries.GetAllQuery;
 
-public class GetAllProductQuery : IRequest<BaseResponse<IEnumerable<ProductResponseDto>>>
+public class GetAllProductQuery : BaseFilters, IRequest<BaseResponse<IEnumerable<ProductResponseDto>>>
 {
 }

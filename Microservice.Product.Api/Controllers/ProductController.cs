@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microservice.Product.Application.Dtos.Product.Request;
 using Microservice.Product.Application.Interfaces.Events;
 using Microservice.Product.Application.UseCases.Product.Commands.CreateCommand;
 using Microservice.Product.Application.UseCases.Product.Commands.DeleteCommand;
@@ -24,9 +25,9 @@ namespace Microservice.Product.Api.Controllers
         }
 
         [HttpGet("List")]
-        public async Task<IActionResult> ProductList()
+        public async Task<IActionResult> ProductList([FromQuery] GetAllProductQuery query)
         {
-            var response = await _mediator.Send(new GetAllProductQuery());
+            var response = await _mediator.Send(query);
 
             return Ok(response);
         }
@@ -48,7 +49,7 @@ namespace Microservice.Product.Api.Controllers
         }
 
         [HttpPost("CreateEvent")]
-        public IActionResult ProductCreateEvent([FromBody] ProductCommand command)
+        public IActionResult ProductCreateEvent([FromBody] ProductRequestDto command)
         {
             _productEventBus.OrderProduct(command);
 

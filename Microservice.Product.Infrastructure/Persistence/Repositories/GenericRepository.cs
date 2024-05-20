@@ -16,6 +16,14 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
         _entity = _context.Set<T>();
     }
 
+    public IQueryable<T> GetAllQueryable()
+    {
+        var response = _entity
+            .Where(x => x.AuditDeleteUser == null && x.AuditDeleteDate == null);
+
+        return response;
+    }
+
     public async Task<IEnumerable<T>> GetAllAsync()
     {
         var response = await _entity

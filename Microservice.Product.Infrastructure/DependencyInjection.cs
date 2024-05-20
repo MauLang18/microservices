@@ -19,6 +19,7 @@ public static class DependencyInjection
             options => options.UseNpgsql(configuration.GetConnectionString("MicroserviceProductConnection"), b => b.MigrationsAssembly(assembly)));
 
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+        services.AddTransient<IOrderingQuery, OrderingQuery>();
         services.AddTransient<IUnitOfWork, UnitOfWork>();
 
         return services;

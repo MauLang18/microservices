@@ -1,8 +1,9 @@
-﻿using Microservice.Product.Domain.Commands;
+﻿using Microservice.Product.Application.Dtos.Product.Request;
+using Microservice.Product.Domain.Commands;
 
 namespace Microservice.Product.Application.Interfaces.Events;
 
 public interface IProductEventBus
 {
-    void OrderProduct(ProductCommand productCommand);
+    void OrderProduct(ProductRequestDto productCommand);
 }
