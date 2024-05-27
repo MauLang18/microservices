@@ -43,6 +43,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BC33887C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Product.Tests", "Microservice.Product.Tests\Microservice.Product.Tests.csproj", "{A0C36171-C3DA-4E12-B036-F048E43DC8E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Payment.Api", "Microservice.Payment.Api\Microservice.Payment.Api.csproj", "{92BD4302-AC4A-4FEA-8606-E0AA36D2CC1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{A0C36171-C3DA-4E12-B036-F048E43DC8E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0C36171-C3DA-4E12-B036-F048E43DC8E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0C36171-C3DA-4E12-B036-F048E43DC8E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92BD4302-AC4A-4FEA-8606-E0AA36D2CC1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92BD4302-AC4A-4FEA-8606-E0AA36D2CC1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92BD4302-AC4A-4FEA-8606-E0AA36D2CC1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92BD4302-AC4A-4FEA-8606-E0AA36D2CC1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,6 +111,7 @@ Global
 		{9E041BAE-D538-4A06-893D-044EBDD29709} = {5C42F3BE-8FB9-4274-89F1-BFDFE80EABE2}
 		{BC33887C-3239-4F34-A038-04C9F5DAD339} = {AD9C038C-41B7-4C15-ABAA-D61A5B8161AE}
 		{A0C36171-C3DA-4E12-B036-F048E43DC8E2} = {BC33887C-3239-4F34-A038-04C9F5DAD339}
+		{92BD4302-AC4A-4FEA-8606-E0AA36D2CC1A} = {5B708A93-0BE9-4201-9F2F-CADF5405E277}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5B09CAB7-DDF9-4D4C-86FC-FD6398218580}
